@@ -42,7 +42,7 @@ const stDescription = {
     textAlign: 'justify'
 };
 
-const url = 'http://157.230.242.35:8080/products-' + lang;
+const url = 'https://cors-anywhere.herokuapp.com/http://157.230.242.35:8080/products-' + lang;
 const e = React.createElement;
 
 class Product extends React.Component {
