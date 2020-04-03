@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <link rel="stylesheet" href="../css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div id="tp" style="display: flex; justify-content: center; align-items: center; background-color: whitesmoke">
+        <img style="width: 10vw" src="../img/logo.svg">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; background-color: whitesmoke">
+        <div class="menuButton">HOME</div>
+        <div onclick="location.href = 'products.html'" class="menuButton">PRODUCTS</div>
+        <div onclick="location.href = 'contact.html'" class="menuButton">CONTACT</div>
+    </div>
+    <div id="sh" class="subheader"><a id="top" href="#tp" style="position: fixed; left: 10pt; opacity: 0; text-decoration: none; color: black">▲ Back to top</a>THE HOME OF SELHOZ TREYD</div>
+</header>
+<div style="display: flex; justify-content: center; align-items: center; text-align: center">
+    <div style="border-radius: 5pt; background-color: whitesmoke; border: thin gainsboro solid; margin: 5pt; padding: 15pt; width: 90vw">
+        <h3>OOO "Selhoz-Treyd</h3>
+    </div>
+</div>
+<footer>
+    <div style="display: block; text-align: center">
+        <div>
+            <img onclick="location.href = '../index.html'" style="width: 5vw; cursor: pointer" src="../img/ru.svg">
+        </div>
+        <br/>
+        <div style="color: whitesmoke; font-size: 9pt">Icons made by
+            <a style="color: whitesmoke; text-decoration: none" href="https://www.flaticon.com/authors/creaticca-creative-agency" title="Creaticca Creative Agency">Creaticca Creative Agency</a>
+            from <a style="color: whitesmoke; text-decoration: none" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br/>
+            Сайт разработал eg0000r
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    let header = document.getElementById("sh");
+    let sticky = header.offsetTop;
+    window.onscroll = function() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            document.getElementById('top').style.opacity = '1';
+        } else {
+            header.classList.remove("sticky");
+            document.getElementById('top').style.opacity = '0';
+        }
+    };
+</script>
+</body>
+</html>

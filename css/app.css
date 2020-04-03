@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: #c6c6c6;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+#showMore {
+    color: #007bff;
+    text-decoration: #007bff underline;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 2pt;
+    border: solid rgba(169, 169, 169, 0.44) thin;
+    padding: 5pt;
+    margin-bottom: 3pt;
+}
+
+textarea {
+    border-radius: 2pt;
+    border: solid rgba(169, 169, 169, 0.44) thin;
+    margin-bottom: 3pt;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10pt;
+    background-color: whitesmoke;
+    margin-top: 5pt;
+    border-top: solid gainsboro thin;
+}
+
+div.menuButton {
+    font-size: 1.5vw;
+    padding: 10pt;
+    user-select: none;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+div.menuButton:hover {
+    text-decoration: underline;
+}
+
+div.subheader {
+    display: flex;
+    background-color: rgba(121, 153, 105, 1);
+    justify-content: center;
+    align-items: center;
+    padding: 5pt;
+}
+
+div.sticky {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+button.submit {
+    border: none;
+    background-color: #007bff;
+    padding: 5pt;
+    border-radius: 3pt;
+    color: #fff;
+    outline: none;
+}
+
+button.submit:hover {
+    background-color: #0074d7;
+}
+
+@media screen and (max-width: 600px) {
+    div {
+        font-size: 3vw;
+    }
+}

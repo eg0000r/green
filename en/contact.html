@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+<header>
+    <div style="display: flex; justify-content: center; align-items: center; background-color: whitesmoke">
+        <img style="width: 10vw" src="../img/logo.svg">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; background-color: whitesmoke">
+        <div onclick="location.href = 'index.html'" class="menuButton">HOME</div>
+        <div onclick="location.href = 'products.html'" class="menuButton">PRODUCTS</div>
+        <div class="menuButton">CONTACT</div>
+    </div>
+    <div id="sh" class="subheader"><a id="top" href="#tp" style="position: fixed; left: 10pt; opacity: 0; text-decoration: none; color: black">▲ Back to top</a>OUR CONTACTS. Trained sales reps are here to help you<img style="width: 25pt; padding-left: 3pt; padding-right: 3pt" src="../img/user.svg"></div>
+</header>
+<div style="display: flex; justify-content: center; align-items: center; text-align: center">
+    <div style="border-radius: 5pt; background-color: whitesmoke; border: thin gainsboro solid; margin: 5pt; padding: 15pt">
+        <h3>PHONE</h3>
+        <p>+7(916)999-99-99</p>
+    </div>
+    <div style="border-radius: 5pt; background-color: whitesmoke; border: thin gainsboro solid; margin: 5pt; padding: 15pt">
+        <h3>ADDRESS</h3>
+        <p>
+            269 Rockaway Blvd.,<br/>
+            Montauk, NY 09102
+        </p>
+    </div>
+    <div style="border-radius: 5pt; background-color: whitesmoke; border: thin gainsboro solid; margin: 5pt; padding: 15pt">
+        <h3>EMAIL</h3>
+        <p>example@mail.com</p>
+    </div>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; text-align: center">
+    <div style="border-radius: 5pt; background-color: whitesmoke; border: thin gainsboro solid; margin: 5pt; padding: 15pt">
+        <h3>LEAVE A REQUEST</h3>
+        <form style="text-align: left">
+            <label>
+                Preferred name<b>*</b><br/>
+                <input style="width: 60vw">
+            </label>
+            <br/>
+            <label>
+                Email address<b>*</b><br/>
+                <input style="width: 60vw">
+            </label>
+            <br/>
+            <label>
+                Phone number<br/>
+                <input style="width: 60vw">
+            </label>
+            <br/>
+            <label>
+                Your request<b>*</b><br/>
+                <textarea style="resize: none; width: 60vw; padding: 5pt"></textarea>
+            </label>
+            <br/>
+            <label>
+                <input type="checkbox">
+                I agree with privacy policy<b>*</b>
+            </label>
+            <label>
+                <input type="checkbox">
+                Let me know about promotions
+            </label>
+            <div style="text-align: center; margin-top: 5pt">
+                <button class="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; text-align: center">
+    <div style="border-radius: 5pt; background-color: whitesmoke; border: thin gainsboro solid; margin: 5pt; padding: 15pt">
+        <iframe height="450" frameborder="0" style="border:0; width: 60vw" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJybDUc_xKtUYRTM9XV8zWRD0&key=AIzaSyBPAnrZTkrvhYWYVHcksJa6cyeC3rcaKSU" allowfullscreen></iframe>
+    </div>
+</div>
+<footer>
+    <div style="display: block; text-align: center">
+        <div>
+            <img onclick="location.href = '../ru/contact.html'" style="width: 5vw; cursor: pointer" src="../img/ru.svg">
+        </div>
+        <br/>
+        <div style="color: whitesmoke; font-size: 9pt">Icons made by
+            <a style="color: whitesmoke; text-decoration: none" href="https://www.flaticon.com/authors/creaticca-creative-agency" title="Creaticca Creative Agency">Creaticca Creative Agency</a>
+            from <a style="color: whitesmoke; text-decoration: none" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br/>
+            Website designed by eg0000r
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    let header = document.getElementById("sh");
+    let sticky = header.offsetTop;
+    window.onscroll = function() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            document.getElementById('top').style.opacity = '1';
+        } else {
+            header.classList.remove("sticky");
+            document.getElementById('top').style.opacity = '0';
+        }
+    };
+</script>
+</body>
+</html>

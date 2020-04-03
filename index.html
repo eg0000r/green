@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГЛАВНАЯ</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div id="tp" style="display: flex; justify-content: center; align-items: center; background-color: whitesmoke">
+        <img style="width: 10vw" src="img/logo.svg">
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; background-color: whitesmoke">
+        <div class="menuButton">ГЛАВНАЯ</div>
+        <div onclick="location.href = 'ru/products.html'" class="menuButton">ПРОДУКТЫ</div>
+        <div onclick="location.href = 'ru/contact.html'" class="menuButton">КОНТАКТЫ</div>
+    </div>
+    <div id="sh" class="subheader"><a id="top" href="#tp" style="position: fixed; left: 10pt; opacity: 0; text-decoration: none; color: black">▲ Наверх</a><span>НАШИ ПРОДУКТЫ. Возник вопрос? </span><img style="width: 25pt; padding-left: 3pt; padding-right: 3pt" src="img/phone-call.svg"><span style="color: white"> ПОЗВОНИТЕ НАМ</span></div>
+</header>
+<footer>
+    <div style="display: block; text-align: center">
+        <!--<div>
+            <img onclick="location.href = 'en/index.html'" style="width: 5vw; cursor: pointer" src="img/en.svg">
+        </div>
+        <br/>-->
+        <div style="color: black; font-size: 9pt">Icons made by
+            <a style="color: black; text-decoration: none" href="https://www.flaticon.com/authors/creaticca-creative-agency" title="Creaticca Creative Agency">Creaticca Creative Agency</a>
+            from <a style="color: black; text-decoration: none" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br/>
+            Сайт разработал eg0000r
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    let header = document.getElementById("sh");
+    let sticky = header.offsetTop;
+    window.onscroll = function() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            document.getElementById('top').style.opacity = '1';
+        } else {
+            header.classList.remove("sticky");
+            document.getElementById('top').style.opacity = '0';
+        }
+    };
+</script>
+</body>
+</html>
