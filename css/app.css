@@ -55,6 +55,7 @@ div.subheader {
     justify-content: center;
     align-items: center;
     padding: 5pt;
+    z-index: 3;
 }
 
 div.sticky {

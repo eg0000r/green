@@ -37,27 +37,27 @@
     </div>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; text-align: center">
-    <div style="border-radius: 5pt; background-color: whitesmoke; border: thin gainsboro solid; margin: 5pt; padding: 15pt">
+    <div id="requestForm" style="border-radius: 5pt; background-color: whitesmoke; border: thin gainsboro solid; margin: 5pt; padding: 15pt">
         <h3>ОСТАВИТЬ ЗАПРОС</h3>
-        <form style="text-align: left">
+        <div style="text-align: left">
             <label>
                 Имя<b>*</b><br/>
-                <input style="width: 60vw">
+                <input id="name" style="width: 60vw">
             </label>
             <br/>
             <label>
                 Email<b>*</b><br/>
-                <input style="width: 60vw">
+                <input id="mail" style="width: 60vw">
             </label>
             <br/>
             <label>
                 Номер телефона<br/>
-                <input style="width: 60vw">
+                <input id="phone" style="width: 60vw">
             </label>
             <br/>
             <label>
                 Ваш запрос<b>*</b><br/>
-                <textarea style="resize: none; width: 60vw; padding: 5pt"></textarea>
+                <textarea id="message" style="resize: none; width: 60vw; padding: 5pt"></textarea>
             </label>
             <br/>
             <label>
@@ -65,13 +65,13 @@
                 Я согласен на обработку персональных данных<b>*</b>
             </label>
             <label>
-                <input type="checkbox">
+                <input id="promo" type="checkbox">
                 Держите меня в курсе новостей
             </label>
             <div style="text-align: center; margin-top: 5pt">
-                <button class="submit">Отправить</button>
+                <button onclick="submit(this)" class="submit">Отправить</button>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 <div style="display: flex; justify-content: center; align-items: center; text-align: center">
@@ -105,6 +105,33 @@
             document.getElementById('top').style.opacity = '0';
         }
     };
+</script>
+<script>
+    const submit = (e) => {
+        let xhr = new XMLHttpRequest();
+        const name = document.getElementById('name').value;
+        const mail = document.getElementById('mail').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+        const promo = document.getElementById('promo').checked;
+        const request = {
+            name: name,
+            mail: mail,
+            phone: phone,
+            message: message,
+            promo: promo
+        };
+        //const request = encodeURI('http://3.124.140.71:7000/record.php?name=' + name + '&mail=' + mail + '&phone=' + phone + '&message=' + message + '&promo=' + promo);
+        xhr.addEventListener('load', () => {
+            if (xhr.responseText === 'SUCCESS') {
+                document.getElementById('requestForm').innerHTML = '<p>Your response has been recorded!</p>'
+            }
+        });
+        /*xhr.open('GET', request);
+        xhr.send();*/
+        xhr.open('POST', 'https://script.google.com/macros/s/AKfycbyJPY0gUHm0ml708-tkIM3RACcpw6XnuNDHs11Ly60-aIEuFCBS/exec');
+        xhr.send(JSON.stringify(request));
+    }
 </script>
 </body>
 </html>

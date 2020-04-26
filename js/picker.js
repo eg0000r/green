@@ -42,7 +42,7 @@ const stDescription = {
     textAlign: 'justify'
 };
 
-const url = 'https://cors-anywhere.herokuapp.com/http://157.230.242.35:8080/products-' + lang;
+const url = 'https://cors-anywhere.herokuapp.com/http://3.124.140.71:8080/products-' + lang;
 const e = React.createElement;
 
 class Product extends React.Component {
@@ -95,6 +95,7 @@ class Product extends React.Component {
                         color: 'transparent',
                         textShadow: '0 0 4px #000'
                     }}>{this.props.description.substr(125, 4)}</span>
+                    <span onClick={() => {this.setState({more: !this.state.more})}} style={{textAlign: 'center', cursor: 'pointer'}}>▼</span>
                 </p>
                 <p onClick={() => {this.setState({more: !this.state.more})}} style={{textAlign: 'center', cursor: 'pointer'}}>▼</p>
             </div>
