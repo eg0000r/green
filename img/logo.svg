@@ -7,36 +7,37 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   id="svg8"
-   version="1.1"
-   viewBox="0 0 156.82629 81.700409"
-   height="81.700409mm"
-   width="156.82629mm"
+   inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"
    sodipodi:docname="logo.svg"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+   width="156.82629mm"
+   height="81.700409mm"
+   viewBox="0 0 156.82629 81.700409"
+   version="1.1"
+   id="svg8">
   <sodipodi:namedview
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1"
-     objecttolerance="10"
-     gridtolerance="10"
-     guidetolerance="10"
-     inkscape:pageopacity="0"
-     inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     id="namedview10"
-     showgrid="true"
-     inkscape:zoom="1.6176639"
-     inkscape:cx="233.79093"
-     inkscape:cy="129.66745"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
+     inkscape:window-y="27"
+     inkscape:window-x="67"
+     inkscape:cy="117.3662"
+     inkscape:cx="284.45619"
+     inkscape:zoom="1.6176639"
+     showgrid="true"
+     id="namedview10"
+     inkscape:window-height="1025"
+     inkscape:window-width="1853"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff">
     <inkscape:grid
-       type="xygrid"
-       id="grid821" />
+       id="grid821"
+       type="xygrid" />
   </sodipodi:namedview>
   <defs
      id="defs2" />
@@ -48,49 +49,74 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-29.310056,-57.418944)"
+     style="fill:#97b787;fill-opacity:1"
      id="layer1"
-     style="fill:#97b787;fill-opacity:1">
+     transform="translate(-29.310056,-57.418944)">
     <rect
-       y="85.333328"
-       x="43.089283"
-       height="53.672623"
-       width="10.583335"
+       style="fill:#97b787;fill-opacity:1;stroke-width:0.10033531"
        id="rect10"
-       style="fill:#97b787;fill-opacity:1;stroke-width:0.10033531" />
-    <rect
-       transform="rotate(-22.48908)"
-       ry="0"
-       y="94.186462"
-       x="-7.2698083"
-       height="9.8273811"
-       width="84.666664"
-       id="rect4528"
-       style="fill:#97b787;fill-opacity:1;stroke-width:0.25810561" />
+       width="10.583335"
+       height="53.672623"
+       x="43.089283"
+       y="85.333328" />
     <rect
        style="fill:#97b787;fill-opacity:1;stroke-width:0.25810561"
-       id="rect4570"
+       id="rect4528"
        width="84.666664"
        height="9.8273811"
-       x="-206.33205"
-       y="11.776626"
+       x="-7.2698083"
+       y="94.186462"
        ry="0"
-       transform="matrix(-0.92395245,-0.38250734,-0.38250734,0.92395245,0,0)" />
+       transform="rotate(-22.48908)" />
     <rect
-       y="85.219948"
-       x="158.61771"
-       height="53.672623"
-       width="10.583335"
+       transform="matrix(-0.92395245,-0.38250734,-0.38250734,0.92395245,0,0)"
+       ry="0"
+       y="11.776626"
+       x="-206.33205"
+       height="9.8273811"
+       width="84.666664"
+       id="rect4570"
+       style="fill:#97b787;fill-opacity:1;stroke-width:0.25810561" />
+    <rect
+       style="fill:#97b787;fill-opacity:1;stroke-width:0.10033531"
        id="rect10-3"
-       style="fill:#97b787;fill-opacity:1;stroke-width:0.10033531" />
+       width="10.583335"
+       height="53.672623"
+       x="158.61771"
+       y="85.219948" />
+    <path
+       id="path95"
+       d="m 92.280889,92.873111 c 1.322916,15.874999 17.197911,15.874999 17.197911,15.874999 0,0 1.32292,15.875 0,0 C 108.15589,92.873111 92.280889,92.873111 92.280889,92.873111 Z"
+       style="fill:#97b787;stroke:#97b787;stroke-width:0.635;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path923"
+       d="m 110.00797,115.62728 1.32292,23.28333"
+       style="fill:none;stroke:#97b787;stroke-width:0.635;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:#97b787;fill-opacity:1;stroke:#97b787;stroke-width:0.635;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 81.927619,122.30904 c 15.05847,5.19692 21.465771,-9.3276 21.465771,-9.3276 0,0 15.05848,5.19692 0,0 -15.058471,-5.19693 -21.465771,9.3276 -21.465771,9.3276 z"
+       id="path95-3" />
+    <path
+       id="path95-3-6"
+       d="m 82.226722,134.14811 c 15.05847,5.19692 21.465788,-9.3276 21.465788,-9.3276 0,0 15.05847,5.19692 0,0 -15.058488,-5.19693 -21.465788,9.3276 -21.465788,9.3276 z"
+       style="fill:#97b787;fill-opacity:1;stroke:#97b787;stroke-width:0.635;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       id="path95-3-7"
+       d="m 139.41125,134.21529 c -15.05847,5.19692 -21.46578,-9.3276 -21.46578,-9.3276 0,0 -15.05847,5.19692 0,0 15.05848,-5.19693 21.46578,9.3276 21.46578,9.3276 z"
+       style="fill:#97b787;fill-opacity:1;stroke:#97b787;stroke-width:0.635;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:#97b787;fill-opacity:1;stroke:#97b787;stroke-width:0.635;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 138.08834,122.30904 c -15.05847,5.19692 -21.46578,-9.3276 -21.46578,-9.3276 0,0 -15.05848,5.19692 0,0 15.05848,-5.19693 21.46578,9.3276 21.46578,9.3276 z"
+       id="path95-3-7-3" />
   </g>
   <g
-     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
      id="layer2"
-     inkscape:label="Layer 1" />
+     inkscape:groupmode="layer" />
 </svg>

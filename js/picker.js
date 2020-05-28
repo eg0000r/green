@@ -60,8 +60,9 @@ class Product extends React.Component {
                     <img style={stImage} src={this.props.image}/>
                     <p style={stDescription}>
                         {this.props.description}
+                        <span onClick={() => {this.setState({more: !this.state.more})}} style={{cursor: 'pointer'}}>▲</span>
                     </p>
-                    <p onClick={() => {this.setState({more: !this.state.more})}} style={{textAlign: 'center', cursor: 'pointer'}}>▲</p>
+                    <div dangerouslySetInnerHTML={{__html: this.props.table}}/>
                 </div>
             )
         }
@@ -95,9 +96,8 @@ class Product extends React.Component {
                         color: 'transparent',
                         textShadow: '0 0 4px #000'
                     }}>{this.props.description.substr(125, 4)}</span>
-                    <span onClick={() => {this.setState({more: !this.state.more})}} style={{textAlign: 'center', cursor: 'pointer'}}>▼</span>
+                    <span onClick={() => {this.setState({more: !this.state.more})}} style={{cursor: 'pointer'}}>▼</span>
                 </p>
-                <p onClick={() => {this.setState({more: !this.state.more})}} style={{textAlign: 'center', cursor: 'pointer'}}>▼</p>
             </div>
         )
     }
@@ -123,7 +123,7 @@ class Content extends React.Component {
         let i;
         for (i = 0; i < this.state.content.length; i ++) {
             out.push(
-                <Product key={i} name={this.state.content[i]['name']} image={this.state.content[i]['image']} description={this.state.content[i]['description']}/>
+                <Product key={i} name={this.state.content[i]['name']} image={this.state.content[i]['image']} description={this.state.content[i]['description']} table={this.state.content[i]['table']}/>
             )
         }
         return out;
