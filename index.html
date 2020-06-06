@@ -113,10 +113,11 @@
     <div style="display: flex; justify-content: center; align-items: center; background-color: whitesmoke">
         <table style="margin-left: auto; margin-right: auto; background-color: whitesmoke">
             <tr>
-                <td><img style="width: 10vw" src="img/logo.svg"></td>
+                <td><img onclick="logoClicked()" id="logo" style="width: 10vw" src="img/logo.svg"></td>
                 <td><div class="menuButton">ГЛАВНАЯ</div></td>
                 <td><div onclick="location.href = 'ru/products.html'" class="menuButton">ПРОДУКТЫ</div></td>
                 <td><div onclick="location.href = 'ru/contact.html'" class="menuButton">КОНТАКТЫ</div></td>
+                <td><div onclick="location.href = 'ru/selmash.html'" class="menuButton">"СЕЛЬМАШ"</div></td>
                 <td><div><a style="color: rgba(121, 153, 105, 1)" href="tel:89062778365">8(906)277-83-65</a></div></td>
             </tr>
         </table>
@@ -180,6 +181,15 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="js/news.js" type="text/babel"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    var logoClicks = 10;
+    function logoClicked() {
+        logoClicks --;
+        if (logoClicks === 0) {
+            $('#logo').attr('src', 'img/j_logo.jpg');
+        }
+    }
+</script>
 <script>
     let header = document.getElementById("sh");
     let sticky = header.offsetTop;

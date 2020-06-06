@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{babel, bootstrap, jquery-3.4.1, jquery-3.4.1.slim, popper, react-dom.development, react.development}" />
+    <file url="PROJECT" libraries="{babel-standalone, jquery, react, react-dom}" />
     <includedPredefinedLibrary name="HTTP Response Handler" />
   </component>
 </project>
