@@ -33,7 +33,7 @@ const stMore = {
 
 const stImage = {
     width: '30vw',
-    height: '20vw'
+    maxHeight: '20vw'
 };
 
 const stDescription = {

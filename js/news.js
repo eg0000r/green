@@ -19,14 +19,14 @@ const demoData = [
 
 class Push extends React.Component {
     render() {
-        const id = this.props.item;
+        const it = this.props.item;
         return(
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '5pt', borderTop: 'thin solid gainsboro', borderBottom: 'thin solid gainsboro'}}>
-                <div style={{paddingRight: '20pt'}}>{demoData[id].date}</div>
-                <img style={{height: '10vw', width: '10vw', padding: '5pt'}} src={demoData[id].img}/>
+                <div style={{paddingRight: '20pt'}}>{it.date}</div>
+                <img style={{height: '10vw', width: '10vw', padding: '5pt'}} src={it.img}/>
                 <div style={{display: "block", padding: '5pt'}}>
-                    <b style={{padding: '5pt'}}>{demoData[id].header}</b><br/>
-                    {demoData[id].body}
+                    <b style={{padding: '5pt'}}>{it.header}</b><br/>
+                    {it.body}
                 </div>
             </div>
         )
@@ -34,11 +34,26 @@ class Push extends React.Component {
 }
 
 class Content extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: []
+        };
+    }
+    componentDidMount = () => {
+        let xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', () => {
+            this.setState({data: JSON.parse(xhr.responseText)});
+            console.log(JSON.parse(xhr.responseText));
+        });
+        xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://3.124.140.71:8080/news-ru');
+        xhr.send();
+    };
     loadContent = () => {
         let i;
         let arr = [];
-        for (i = 0; i < demoData.length; i ++) {
-            arr.push(<Push key={i} item={i}/>)
+        for (i = 0; i < this.state.data.length; i ++) {
+            arr.push(<Push key={i} item={this.state.data[i]}/>)
         }
         return arr;
     };
