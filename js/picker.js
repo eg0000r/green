@@ -9,6 +9,15 @@ const stProduct = {
     backgroundColor: 'whitesmoke'
 };
 
+const stLabel = {
+    border: 'none',
+    textAlign: 'center',
+    padding: '15pt',
+    margin: '5pt',
+    backgroundColor: 'transparent',
+    width: '80vw'
+};
+
 const stProductActive = {
     border: 'thin gainsboro solid',
     borderRadius: '5pt',
@@ -63,6 +72,7 @@ class Product extends React.Component {
                         <span onClick={() => {this.setState({more: !this.state.more})}} style={{cursor: 'pointer'}}>▲</span>
                     </p>
                     <div dangerouslySetInnerHTML={{__html: this.props.table}}/>
+                    <p dangerouslySetInnerHTML={{__html: this.props.price}}/>
                 </div>
             )
         }
@@ -120,10 +130,16 @@ class Content extends React.Component {
     };
     loadContent = () => {
         let out = [];
+        out.push(<div style={stLabel}>Теплицы</div>);
         let i;
+        let houses = true;
         for (i = 0; i < this.state.content.length; i ++) {
+            if (houses && this.state.content[i]['type'] === 2) {
+                houses = false;
+                out.push(<div style={stLabel}>Сельмаш</div>);
+            }
             out.push(
-                <Product key={i} name={this.state.content[i]['name']} image={this.state.content[i]['image']} description={this.state.content[i]['description']} table={this.state.content[i]['table']}/>
+                <Product key={i} name={this.state.content[i]['name']} image={this.state.content[i]['image']} description={this.state.content[i]['description']} table={this.state.content[i]['table']} price={this.state.content[i]['price']}/>
             )
         }
         return out;

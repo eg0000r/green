@@ -6,17 +6,26 @@
     <title>Продукты</title>
     <link rel="stylesheet" href="../css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Oswald&display=swap" rel="stylesheet">
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: solid thin black;
+        }
+    </style>
 </head>
 <body>
 <header>
     <div style="display: flex; justify-content: center; align-items: center; background-color: whitesmoke">
-        <table style="margin-left: auto; margin-right: auto; background-color: whitesmoke">
+        <table style="margin-left: auto; margin-right: auto; background-color: whitesmoke; border-collapse: separate">
             <tr>
-                <td><img style="width: 10vw" src="../img/logo.svg"></td>
-                <td><div onclick="location.href = '../index.html'" class="menuButton">ГЛАВНАЯ</div></td>
-                <td><div onclick="location.href = 'products.html'" class="menuButton">ПРОДУКТЫ</div></td>
-                <td><div onclick="location.href = 'contact.html'" class="menuButton">КОНТАКТЫ</div></td>
-                <td><div><a style="color: rgba(121, 153, 105, 1)" href="tel:89062778365">8(906)277-83-65</a></div></td>
+                <td style="border: none"><img style="width: 10vw" src="../img/logo.svg"></td>
+                <td style="border: none"><div onclick="location.href = '../index.html'" class="menuButton">ГЛАВНАЯ</div></td>
+                <td style="border: none"><div onclick="location.href = 'products.html'" class="menuButton">ПРОДУКТЫ</div></td>
+                <td style="border: none"><div onclick="location.href = 'contact.html'" class="menuButton">КОНТАКТЫ</div></td>
+                <td style="border: none"><div><a style="color: rgba(121, 153, 105, 1)" href="tel:89062778365">8(906)277-83-65</a></div></td>
             </tr>
         </table>
     </div>
