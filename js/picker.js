@@ -130,13 +130,13 @@ class Content extends React.Component {
     };
     loadContent = () => {
         let out = [];
-        out.push(<div style={stLabel}>Теплицы</div>);
+        out.push(<div key={-1} style={stLabel}>Теплицы</div>);
         let i;
         let houses = true;
         for (i = 0; i < this.state.content.length; i ++) {
             if (houses && this.state.content[i]['type'] === 2) {
                 houses = false;
-                out.push(<div style={stLabel}>Сельмаш</div>);
+                out.push(<div key={-2} style={stLabel}>Сельмаш</div>);
             }
             out.push(
                 <Product key={i} name={this.state.content[i]['name']} image={this.state.content[i]['image']} description={this.state.content[i]['description']} table={this.state.content[i]['table']} price={this.state.content[i]['price']}/>
