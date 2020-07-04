@@ -6,7 +6,7 @@ const stProduct = {
     padding: '15pt',
     textAlign: 'center',
     margin: '5pt',
-    backgroundColor: 'whitesmoke'
+    backgroundColor: 'whitesmoke',
 };
 
 const stLabel = {
@@ -19,6 +19,9 @@ const stLabel = {
 };
 
 const stProductActive = {
+    //display: 'flex',
+    //flexDirection: 'column',
+    //flex: '1',
     border: 'thin gainsboro solid',
     borderRadius: '5pt',
     padding: '15pt',
@@ -48,7 +51,8 @@ const stImage = {
 const stDescription = {
     width: stImage.width,
     fontSize: '1vw',
-    textAlign: 'justify'
+    textAlign: 'justify',
+    flex: '0 1 auto'
 };
 
 const url = 'https://cors-anywhere.herokuapp.com/http://3.124.140.71:8080/products-' + lang;
@@ -113,6 +117,34 @@ class Product extends React.Component {
     }
 }
 
+class ParentContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            expanded: false
+        };
+    }
+    render() {
+        if (this.state.expanded) {
+            return(
+                <div>
+                    <h1>{this.props.label}</h1>
+                    <div style={{display: 'flex', alignItems: 'stretch', justifyContent: 'center', font: '1.5vw sans-serif', flexWrap: 'wrap'}}>
+                        {this.props.content}
+                    </div>
+                    <button onClick={() => {this.setState({expanded: false})}}>СВЕРНУТЬ</button>
+                </div>
+                );
+        }
+        return(
+            <div>
+                <h1>{this.props.label}</h1>
+                <button onClick={() => {this.setState({expanded: true})}}>ПОКАЗАТЬ</button>
+            </div>
+        );
+    }
+}
+
 class Content extends React.Component {
     constructor(props) {
         super(props);
@@ -130,23 +162,25 @@ class Content extends React.Component {
     };
     loadContent = () => {
         let out = [];
-        out.push(<div key={-1} style={stLabel}>Теплицы</div>);
+        let temp = [];
         let i;
         let houses = true;
         for (i = 0; i < this.state.content.length; i ++) {
             if (houses && this.state.content[i]['type'] === 2) {
                 houses = false;
-                out.push(<div key={-2} style={stLabel}>Сельмаш</div>);
+                out.push(<ParentContainer key={-1} label={'Теплицы'} content={temp}/>);
+                temp = [];
             }
-            out.push(
+            temp.push(
                 <Product key={i} name={this.state.content[i]['name']} image={this.state.content[i]['image']} description={this.state.content[i]['description']} table={this.state.content[i]['table']} price={this.state.content[i]['price']}/>
             )
         }
+        out.push(<ParentContainer key={-2} label={'С/Х техника'} content={temp}/>);
         return out;
     };
     render() {
         return (
-            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', font: '1.5vw sans-serif', flexFlow: 'row wrap'}}>
+            <div style={{textAlign: 'center'}}>
                 {this.loadContent()}
             </div>
         );
