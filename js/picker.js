@@ -55,7 +55,7 @@ const stDescription = {
     flex: '0 1 auto'
 };
 
-const url = 'https://cors-anywhere.herokuapp.com/http://3.124.140.71:8080/products-' + lang;
+const url = 'https://cors-anywhere.herokuapp.com/http://35.158.250.185:8080/products-' + lang;
 const e = React.createElement;
 
 class Product extends React.Component {

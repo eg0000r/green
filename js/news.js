@@ -46,7 +46,7 @@ class Content extends React.Component {
             this.setState({data: JSON.parse(xhr.responseText)});
             console.log(JSON.parse(xhr.responseText));
         });
-        xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://3.124.140.71:8080/news-ru');
+        xhr.open('GET', 'https://cors-anywhere.herokuapp.com/http://35.158.250.185:8080/news-ru');
         xhr.send();
     };
     loadContent = () => {
