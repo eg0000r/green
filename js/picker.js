@@ -124,22 +124,25 @@ class ParentContainer extends React.Component {
             expanded: false
         };
     }
+    componentDidMount = () => {
+        console.log(this.props.content);
+    };
     render() {
         if (this.state.expanded) {
             return(
                 <div>
+                    <button style={{border: 'solid black thin', borderRadius: '15pt', backgroundColor: 'transparent', outline: 'none', marginTop: '15pt'}} onClick={() => {this.setState({expanded: false}); this.props.callback()}}>◄ Назад</button>
                     <h1>{this.props.label}</h1>
                     <div style={{display: 'flex', alignItems: 'stretch', justifyContent: 'center', font: '1.5vw sans-serif', flexWrap: 'wrap'}}>
                         {this.props.content}
                     </div>
-                    <button onClick={() => {this.setState({expanded: false})}}>СВЕРНУТЬ</button>
                 </div>
                 );
         }
         return(
-            <div>
-                <h1>{this.props.label}</h1>
-                <button onClick={() => {this.setState({expanded: true})}}>ПОКАЗАТЬ</button>
+            <div onClick={() => {this.setState({expanded: true}); this.props.callback()}} style={stProduct}>
+                <h3 style={{width: stImage.width}}>{this.props.label}</h3>
+                <img style={stImage} src={this.props.image}/>
             </div>
         );
     }
@@ -149,7 +152,9 @@ class Content extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            content: []
+            content: [],
+            greenVisible: true,
+            machineryVisible: true
         };
     }
     componentDidMount = () => {
@@ -160,6 +165,18 @@ class Content extends React.Component {
         xhr.open('GET', url);
         xhr.send();
     };
+    hideGreenhouses = () => {
+        this.setState({greenVisible: false});
+    };
+    showGreenhouses = () => {
+        this.setState({greenVisible: true});
+    };
+    hideMachinery = () => {
+        this.setState({machineryVisible: false});
+    };
+    showMachinery = () => {
+        this.setState({machineryVisible: true});
+    };
     loadContent = () => {
         let out = [];
         let temp = [];
@@ -168,20 +185,30 @@ class Content extends React.Component {
         for (i = 0; i < this.state.content.length; i ++) {
             if (houses && this.state.content[i]['type'] === 2) {
                 houses = false;
-                out.push(<ParentContainer key={-1} label={'Теплицы'} content={temp}/>);
+                if (this.state.greenVisible && this.state.machineryVisible) {
+                    out.push(<ParentContainer callback={this.hideMachinery} key={-1} id={-1} label={'Теплицы'} content={temp} image={'https://i.imgur.com/TPgkI0j.png'}/>);
+                } else if (this.state.greenVisible && !this.state.machineryVisible) {
+                    out.push(<ParentContainer callback={this.showMachinery} key={-1} id={-1} label={'Теплицы'} content={temp} image={'https://i.imgur.com/TPgkI0j.png'}/>);
+                }
                 temp = [];
             }
             temp.push(
                 <Product key={i} name={this.state.content[i]['name']} image={this.state.content[i]['image']} description={this.state.content[i]['description']} table={this.state.content[i]['table']} price={this.state.content[i]['price']}/>
             )
         }
-        out.push(<ParentContainer key={-2} label={'С/Х техника'} content={temp}/>);
+        if (this.state.machineryVisible && this.state.greenVisible) {
+            out.push(<ParentContainer callback={this.hideGreenhouses} key={-2} id={-2} label={'С/Х техника'} content={temp} image={'https://i.imgur.com/9GXzrBb.png'}/>);
+        } else if (this.state.machineryVisible && !this.state.greenVisible) {
+            out.push(<ParentContainer callback={this.showGreenhouses} key={-2} id={-2} label={'С/Х техника'} content={temp} image={'https://i.imgur.com/9GXzrBb.png'}/>);
+        }
         return out;
     };
     render() {
         return (
             <div style={{textAlign: 'center'}}>
-                {this.loadContent()}
+                <div style={{display: 'flex', alignItems: 'stretch', justifyContent: 'center', font: '1.5vw sans-serif', flexWrap: 'wrap'}}>
+                    {this.loadContent()}
+                </div>
             </div>
         );
     }
